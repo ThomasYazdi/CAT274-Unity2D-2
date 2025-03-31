@@ -20,7 +20,7 @@ public class Tower : CharacterBase
         bulletTimer += Time.deltaTime;
         if (bulletTimer >= timerReset)
         {
-            Instantiate(projectile);
+            Instantiate(projectile, transform.position, Quaternion.identity);
             bulletTimer = 0f;
         }
 
@@ -30,7 +30,8 @@ public class Tower : CharacterBase
         if (collision.gameObject.tag == "Enemy")
         {
             Debug.Log("collided with enemy");
-            health = health - 1;
+            health = health - 10;
+            Destroy(collision.gameObject);
         }
     }
 }

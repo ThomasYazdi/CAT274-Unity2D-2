@@ -105,10 +105,12 @@ MonoBehaviour:
   timerReset: 1
   projectile: {fileID: 3359353771141810399}
   targetEnemy: {fileID: 0}
-  speed: 0.005
+  speed: 0.01
   manager: {fileID: 0}
   thisObject: {fileID: 3359353771141810399}
   dir: {x: 0, y: 0, z: 0}
+  lifeTime: 0
+  endTime: 5
 --- !u!58 &5671117072416891079
 CircleCollider2D:
   m_ObjectHideFlags: 0

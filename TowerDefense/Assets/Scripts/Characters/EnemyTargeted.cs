@@ -10,7 +10,7 @@ public class EnemyTargeted : Enemy
     void Start()
     {
         targetTower = GameObject.FindWithTag("Tower");
-        speed = Random.Range(xSpeed, ySpeed);  //randomize spawn speed
+        speed = Random.Range(xSpeed, ySpeed);
     }
 
     // Update is called once per frame
@@ -26,12 +26,12 @@ public class EnemyTargeted : Enemy
         }
     }
 
-    Vector3 VectorToTower() //function to get the direction to the tower from the current enemy
+    Vector3 VectorToTower()
     {
         Vector3 targetDir;
-        targetDir = targetTower.transform.position - transform.position; //subtracting the position of the enemy from the posititon of the tower to get the vector for the direction between them
+        targetDir = targetTower.transform.position - transform.position;
 
-        targetDir = targetDir.normalized; //normalize sets vector magnitude to 1 to clean it up
-        return targetDir;//return the direction vector
+        targetDir = targetDir.normalized;
+        return targetDir;
     }
 }

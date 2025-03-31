@@ -39,12 +39,12 @@ public class Projectile : Tower
         }
     }
 
-    Vector3 VectorToEnemy() //function to get the direction to the tower from the current enemy
+    Vector3 VectorToEnemy() 
     {
         Vector3 targetDir;
-        targetDir = targetEnemy.transform.position - transform.position; //subtracting the position of the enemy from the posititon of the tower to get the vector for the direction between them
+        targetDir = targetEnemy.transform.position - transform.position;
 
-        targetDir = targetDir.normalized; //normalize sets vector magnitude to 1 to clean it up
-        return targetDir;//return the direction vector
+        targetDir = targetDir.normalized;
+        return targetDir;
     }
 }
