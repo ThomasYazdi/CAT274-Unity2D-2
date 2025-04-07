@@ -389,9 +389,9 @@ MonoBehaviour:
   characterName: Enemy
   health: 10
   displayHealth: {fileID: 8212953580930731724}
-  speed: 0.003
-  xSpeed: 0.003
-  ySpeed: 0.005
+  speed: 0.25
+  xSpeed: 0.12
+  ySpeed: 0.12
   thisObject: {fileID: 9219711509666947529}
   xDir: 0
   yDir: 7

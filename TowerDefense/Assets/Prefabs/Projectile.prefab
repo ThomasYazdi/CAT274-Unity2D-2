@@ -105,7 +105,7 @@ MonoBehaviour:
   timerReset: 1
   projectile: {fileID: 3359353771141810399}
   targetEnemy: {fileID: 0}
-  speed: 0.01
+  speed: 0.1
   manager: {fileID: 0}
   thisObject: {fileID: 3359353771141810399}
   dir: {x: 0, y: 0, z: 0}

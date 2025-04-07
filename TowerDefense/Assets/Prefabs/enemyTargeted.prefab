@@ -239,8 +239,8 @@ MonoBehaviour:
   health: 5
   displayHealth: {fileID: 4966833829747199162}
   speed: 0.5
-  xSpeed: 0.002
-  ySpeed: 0.005
+  xSpeed: 0.05
+  ySpeed: 0.05
   thisObject: {fileID: 3087047422945968967}
   xDir: -1
   yDir: 1

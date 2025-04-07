@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Enemy : CharacterBase
 {
-    public float speed;
+    public float speed = 3f;
     public float xSpeed;//for determining random spawn speed
     public float ySpeed;//for deter4mining random spawn speed
     public GameObject thisObject;
@@ -49,7 +49,8 @@ public class Enemy : CharacterBase
     {
         if (other.tag == "Bomb")
         {
-            health = health - 5;
+            health = health - 10;
+            manager.money = manager.money + 20;
             Destroy(other.gameObject);
         }
 

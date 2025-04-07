@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     public int money = 500;
-    public int bombCost = 20;
+    public int bombCost = 50;
 
     public float enemyTimer = 0f;
     public float spawnInterval = 1f;
@@ -25,8 +25,6 @@ public class GameManager : MonoBehaviour
     public GameObject enemyTargeted;
 
     public TextMeshProUGUI moneyDisplay;
-
-    public GameObject tower;
 
     private void Awake()
     {
@@ -48,7 +46,7 @@ public class GameManager : MonoBehaviour
         enemyTimer2 += Time.deltaTime;
 
         Vector3 targetPos = new Vector3(Random.Range(xBounds.x, xBounds.y), Random.Range(yBounds.x, yBounds.y), 0);
-        if (money > 50 && Input.GetKeyDown(KeyCode.Space))
+        if (money > 50 && Input.GetKeyDown(KeyCode.B))
         {
             Instantiate(bomb, targetPos, Quaternion.identity);
             money = money - bombCost;
@@ -67,11 +65,5 @@ public class GameManager : MonoBehaviour
         }
 
         moneyDisplay.text = "Money: " + money;
-
-        tower = GameObject.FindWithTag("Tower");
-        if (tower == null)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
     }
 }

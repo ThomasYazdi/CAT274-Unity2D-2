@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Projectile : Tower
 {
-    public float speed = 1f;
+    public float speed = 5f;
     public GameManager manager;
     public GameObject thisObject;
     public Vector3 dir;
@@ -34,6 +34,7 @@ public class Projectile : Tower
     {
         if (other.tag == "Enemy")
         {
+            manager.money = manager.money + 20;
             Destroy(other.gameObject);
             targetEnemy = null;
         }
